@@ -28,14 +28,14 @@ func encryptPassword(password []byte) string {
 	}
 	return base64.StdEncoding.EncodeToString(encrypted)
 }
-func hello(w http.ResponseWriter, r *http.Request) {
+func core(w http.ResponseWriter, r *http.Request) {
 	password := r.FormValue("password")
 	fmt.Println(password)
 	w.Write([]byte(encryptPassword([]byte(password))))
 }
 
 func main() {
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/", core)
 
 	fmt.Printf("Starting server for testing HTTP POST...\n")
 	if err := http.ListenAndServe(":6663", nil); err != nil {
