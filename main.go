@@ -36,8 +36,6 @@ func core(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", core)
-
-	fmt.Printf("Starting server for testing HTTP POST...\n")
 	if err := http.ListenAndServe(":6663", nil); err != nil {
 		log.Fatal(err)
 	}
