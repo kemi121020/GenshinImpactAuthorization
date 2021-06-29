@@ -1,4 +1,4 @@
-# Simple **Go** Server to encrypt **Genshin Impact** passwords! :mushroom::dolls::flags::ribbon:
+# Simple **Go** Server to encrypt **Genshin Impact** passwords! :crystal_ball::dolls::flags::ribbon:
 ## Example of usage:
 ```python
 import requests
